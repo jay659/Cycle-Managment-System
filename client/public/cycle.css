@@ -58,6 +58,13 @@ a {
 a:hover {
   text-decoration: none !important;
 }
+.text,
+.lists {
+  font-size: 1.2rem !important;
+}
+.bolder {
+  font-weight: 500;
+}
 /* ================ basic ========== */
 body {
   background-color: #fff;
@@ -455,18 +462,20 @@ h6 {
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
- .bootstrap-timepicker {
+.bootstrap-timepicker {
   position: relative;
 }
 .bootstrap-timepicker.pull-right .bootstrap-timepicker-widget.dropdown-menu {
   left: auto;
   right: 0;
 }
-.bootstrap-timepicker.pull-right .bootstrap-timepicker-widget.dropdown-menu:before {
+.bootstrap-timepicker.pull-right
+  .bootstrap-timepicker-widget.dropdown-menu:before {
   left: auto;
   right: 12px;
 }
-.bootstrap-timepicker.pull-right .bootstrap-timepicker-widget.dropdown-menu:after {
+.bootstrap-timepicker.pull-right
+  .bootstrap-timepicker-widget.dropdown-menu:after {
   left: auto;
   right: 13px;
 }
@@ -493,7 +502,7 @@ h6 {
   position: absolute;
 }
 .bootstrap-timepicker-widget.dropdown-menu:after {
-  border-bottom: 6px solid #FFFFFF;
+  border-bottom: 6px solid #ffffff;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   content: "";
@@ -565,7 +574,12 @@ h6 {
   margin-top: 2px;
   font-size: 18px;
 }
-.bootstrap-timepicker-widget table td input {width: 25px;margin: 0;text-align: center;border:none}
+.bootstrap-timepicker-widget table td input {
+  width: 25px;
+  margin: 0;
+  text-align: center;
+  border: none;
+}
 .bootstrap-timepicker-widget .modal-content {
   padding: 4px;
 }
@@ -587,7 +601,7 @@ h6 {
 /* =====about us ======== */
 .about_container {
   width: 100%;
-  height: 50vh;
+  height: 60vh;
   background-color: rgb(245, 240, 240);
   clip-path: polygon(
     50% 0%,
@@ -606,87 +620,87 @@ h6 {
 /* ====table========== */
 .table-fill {
   background: white;
-  border-radius:3px;
+  border-radius: 3px;
   border-collapse: collapse;
-  
+
   margin: auto;
- 
-  padding:5px;
+
+  padding: 5px;
   width: 100%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   animation: float 5s infinite;
 }
- 
+
 th {
   color: #fff;
   background: var(--primary_color);
-  border-bottom:4px solid #9ea7af;
+  border-bottom: 4px solid #9ea7af;
   border-right: 1px solid #343a45;
-  font-size:23px;
+  font-size: 23px;
   font-weight: 100;
-  padding:24px;
-  text-align:left;
+  padding: 24px;
+  text-align: left;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  vertical-align:middle;
+  vertical-align: middle;
 }
 
 th:first-child {
-  border-top-left-radius:3px;
+  border-top-left-radius: 3px;
 }
- 
+
 th:last-child {
-  border-top-right-radius:3px;
-  border-right:none;
+  border-top-right-radius: 3px;
+  border-right: none;
 }
-  
+
 tr {
-  border-top: 1px solid #C1C3D1;
-  border-bottom: 1px solid #C1C3D1;
-  color:#666B85;
-  font-size:16px;
-  font-weight:normal;
+  border-top: 1px solid #c1c3d1;
+  border-bottom: 1px solid #c1c3d1;
+  color: #666b85;
+  font-size: 16px;
+  font-weight: normal;
   text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
 }
- 
+
 tr:hover td {
-  background:#9ea7af;
-  color:#FFFFFF;
+  background: #9ea7af;
+  color: #ffffff;
   border-top: 1px solid #22262e;
 }
- 
+
 tr:first-child {
-  border-top:none;
+  border-top: none;
 }
 
 tr:last-child {
-  border-bottom:none;
+  border-bottom: none;
 }
- 
+
 tr:nth-child(odd) td {
-  background:#EBEBEB;
+  background: #ebebeb;
 }
- 
+
 tr:nth-child(odd):hover td {
-  background:#9ea7af;
+  background: #9ea7af;
 }
 
 tr:last-child td:first-child {
-  border-bottom-left-radius:3px;
+  border-bottom-left-radius: 3px;
 }
- 
+
 tr:last-child td:last-child {
-  border-bottom-right-radius:3px;
+  border-bottom-right-radius: 3px;
 }
- 
+
 td {
-  background:#FFFFFF;
-  padding:20px;
-  text-align:left;
-  vertical-align:middle;
-  font-weight:300;
-  font-size:18px;
+  background: #ffffff;
+  padding: 20px;
+  text-align: left;
+  vertical-align: middle;
+  font-weight: 300;
+  font-size: 18px;
   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
-  border-right: 1px solid #C1C3D1;
+  border-right: 1px solid #c1c3d1;
 }
 
 td:last-child {
@@ -729,5 +743,47 @@ td.text-right {
   }
   .card-front {
     height: 23rem;
+  }
+}
+
+/* SPINNER */
+
+.parent-loader {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  z-index: 0;
+  background-color: white;
+}
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

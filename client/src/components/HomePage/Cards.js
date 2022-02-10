@@ -6,7 +6,6 @@ import CycleCard from "./CycleCard";
 
 function Cards() {
   const { cycles } = useContext(CycleContext);
-
   return (
     <>
       <div className="container-fluid pt-50">
@@ -15,7 +14,7 @@ function Cards() {
         <div className="card-section mt-4">
           <div className="row text-center">
             <h2 className="title-underline capitalize">
-              best<span className="t-orange"> Ones</span>
+              Best<span className="t-orange"> Ones</span>
             </h2>
           </div>
           <div className="row pt-50 ">

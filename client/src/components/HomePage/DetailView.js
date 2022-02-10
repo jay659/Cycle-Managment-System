@@ -1,4 +1,3 @@
-
 import Form from "../Layout/Form";
 import React, { useRef, useEffect } from "react";
 import { useLocation } from "react-router-dom";
@@ -65,23 +64,24 @@ function DetailView() {
               ></img>
             </div>
           </div>
-          <div className="col-12 col-md-12 col-lg-6">
+          <div className="col-12 col-md-12 col-lg-6 my-auto">
             <div className="detail_view_main_details">
-              <p className="text">
+              <p className="text bolder">
                 Renting a bike is by far the best way to discover the city of
                 Ahmedabad. It's fun, healthy, sustainable and utterly functional
-                in a compact city like Ahmedabad! MYBYK is the largest bike
-                rental company in the city. We have over 2,000 bikes available
-                in 14 different locations in Ahmedabad and are the only one that
-                offers 'hop on drop off'. Ride like a local through this
-                beautiful city on an original, Green.
+                in a compact city like Ahmedabad! The main purpose of this
+                project is to provide cycle facilities of user who don’t have
+                their own vehicle and the people who want to reach their
+                destination which cover short distance. We think about users who
+                need easy and cheap transportation. So, here we are giving some
+                services behalf of the transportation service
               </p>
             </div>
           </div>
         </div>
 
         <div>
-          <Form cycle={cycle} />
+          <Form cycle={cycle && cycle} />
         </div>
       </div>
     </>

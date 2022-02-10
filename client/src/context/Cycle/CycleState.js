@@ -7,17 +7,20 @@ export default function CycleState(props) {
     cycles: null,
     loading: true,
     successMessage: null,
-    bookedCycle: null,
+    bookedCycle: [],
   };
 
   const loadCycle = async () => {
     try {
       const res = await axios.get(`/api/cycle`);
+      console.log(res.data);
       dispatch({
         type: "LOAD_CYCLE",
         payload: res.data,
       });
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const bookCycle = async (form) => {
@@ -27,7 +30,9 @@ export default function CycleState(props) {
         type: "BOOK_CYCLE",
         payload: res.data,
       });
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const getBookedCycle = async () => {
@@ -38,7 +43,9 @@ export default function CycleState(props) {
         type: "GET_BOOK_CYCLE",
         payload: res.data,
       });
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const clearSuccessMessage = async () => {
@@ -53,6 +60,8 @@ export default function CycleState(props) {
         loading: state.loading,
         successMessage: state.successMessage,
         bookedCycle: state.bookedCycle,
+        loading: state.loading,
+
         loadCycle,
         bookCycle,
         clearSuccessMessage,

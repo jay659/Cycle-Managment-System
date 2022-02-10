@@ -1,48 +1,46 @@
-import React,{useEffect,useRef} from "react";
-import {gsap} from "gsap";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 function Aboutmain() {
-
   gsap.registerPlugin(ScrollTrigger);
-  const ref= useRef(null);
-  useEffect(()=>{
+  const ref = useRef(null);
+  useEffect(() => {
     const element = ref.current;
     gsap.fromTo(
       element.querySelector(".text"),
       {
-        opacity:0,
-        x: 200
+        opacity: 0,
+        x: 200,
       },
       {
-        opacity:1,
+        opacity: 1,
         x: 0,
         duration: 1,
-        ease:"ease",
+        ease: "ease",
         scrollTrigger: {
           trigger: element.querySelector(".home-about"),
           start: "top top",
-        }
+        },
       }
-    )
+    );
     gsap.fromTo(
       element.querySelector(".image"),
       {
-        opacity:0,
-        x: -200
+        opacity: 0,
+        x: -200,
       },
       {
-        opacity:1,
+        opacity: 1,
         x: 0,
         duration: 1,
-        ease:"ease",
+        ease: "ease",
         scrollTrigger: {
           trigger: element.querySelector(".home-about"),
           start: "top top",
-        }
+        },
       }
-    )
-  },[])
-
+    );
+  }, []);
 
   return (
     <>
@@ -60,15 +58,16 @@ function Aboutmain() {
               className="img-fluid image"
             />
           </div>
-          <div className="col-sm-12 col-md-12 col-12 col-lg-8 col-xl-8">
-            <p className="text">
+          <div className="col-sm-12 col-md-12 col-12 col-lg-8 col-xl-8 my-auto">
+            <p className="text bolder">
               Renting a bike is by far the best way to discover the city of
               Ahmedabad. It's fun, healthy, sustainable and utterly functional
-              in a compact city like Ahmedabad! MYBYK is the largest bike rental
-              company in the city. We have over 2,000 bikes available in 14
-              different locations in Ahmedabad and are the only one that offers
-              'hop on drop off'. Ride like a local through this beautiful city
-              on an original, Green.
+              in a compact city like Ahmedabad! The main purpose of this project
+              is to provide cycle facilities of user who don’t have their own
+              vehicle and the people who want to reach their destination which
+              cover short distance. We think about users who need easy and cheap
+              transportation. So, here we are giving some services behalf of the
+              transportation service
             </p>
           </div>
         </div>

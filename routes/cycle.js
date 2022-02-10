@@ -38,7 +38,7 @@ router.post("/", async (req, res) => {
 // @route    GET api/cycle
 // @desc     Get a user
 // @access   Public
-router.get("/", auth, async (req, res) => {
+router.get("/", async (req, res) => {
   let cycle = await Cycle.find();
   res.status(200).send(cycle);
 });

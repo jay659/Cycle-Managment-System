@@ -49,5 +49,10 @@ export default (state, action) => {
         ...state,
         error: null,
       };
+    case "AUTH_ERROR":
+      return {
+        ...state,
+        loading: false,
+      };
   }
 };

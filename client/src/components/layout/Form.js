@@ -7,10 +7,14 @@ import Alert from "../Layout/Alert";
 
 function Form({ cycle }) {
   const { user, loadUser } = useContext(UserContext);
-  const { bookCycle, successMessage, clearSuccessMessage } = useContext(
-    CycleContext
-  );
+  const {
+    bookCycle,
+    successMessage,
+    clearSuccessMessage,
+    loadCycle,
+  } = useContext(CycleContext);
 
+  console.log(cycle);
   const [form, setForm] = useState({
     image_url: cycle.image_url,
     name: "",
@@ -39,6 +43,7 @@ function Form({ cycle }) {
 
   useEffect(() => {
     loadUser();
+    loadCycle();
   }, []);
 
   if (successMessage) {
@@ -146,13 +151,17 @@ function Form({ cycle }) {
                 required
               >
                 <option value="">None</option>
-                <option value="Ghodasar">Ghodasar</option>
-                <option value="Nikol">Nikol</option>
-                <option value="Maninagar">Maninagar</option>
-                <option value="SG Highway">SG Highway</option>
-                <option value="Asharam Road">Asharam Road</option>
                 <option value="CG Road">CG Road</option>
+                <option value="Asharam Road">Asharam Road</option>
+                <option value="SG Highway">SG Highway</option>
+                <option value="Nikol">Nikol</option>
                 <option value="Vastrapur">Vastrapur</option>
+                <option value="Ranip">Ranip</option>
+                <option value="Maninagar">Maninagar</option>
+                <option value="Ghodasar">Ghodasar</option>
+                <option value="Naroda">Naroda</option>
+                <option value="Navrangpura">Navrangpura</option>
+                <option value="Satellite">Satellite</option>
               </select>
             </div>
             <button

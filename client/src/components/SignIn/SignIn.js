@@ -78,7 +78,7 @@ export default function SignIn(props) {
             </div>
           </form>
           <p className="text-center t-blue">
-            <a href="#" className="t-blue font-weight-bold">
+            <a href="/signup" className="t-blue font-weight-bold">
               Sign Up here
             </a>
           </p>
